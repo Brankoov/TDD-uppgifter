@@ -1,8 +1,8 @@
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import se.branko.Calculator;
-import se.branko.CalculatorService;
+import se.branko.calculator.Calculator;
+import se.branko.calculator.CalculatorService;
 
 import static org.junit.jupiter.api.Assertions.*;
 

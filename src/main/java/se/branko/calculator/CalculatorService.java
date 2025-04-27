@@ -1,4 +1,4 @@
-package se.branko;
+package se.branko.calculator;
 
 public class CalculatorService {
 
