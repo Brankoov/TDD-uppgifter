@@ -1,7 +1,14 @@
 package se.branko;
 
+import se.branko.animal.Bird;
+import se.branko.animal.Dog;
+import se.branko.animal.IAnimal;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
-    private Item item;
+
 
     public static void main(String[] args) {
         //Items
@@ -18,6 +25,36 @@ public class Main {
         double totalAfterDiscount = totalBeforeDiscount - discountAmount;
         System.out.println("Discount: $" + discountAmount);
         System.out.println("Total after discount: $" + totalAfterDiscount);
+
+        List<IAnimal> animalList = new ArrayList<>();
+
+        IAnimal bird = new Bird();
+        IAnimal bird2 = new Bird();
+
+        IAnimal dog = new Dog();
+        IAnimal dog2 = new Dog();
+
+        animalList.add(bird);
+        animalList.add(bird2);
+        animalList.add(dog);
+
+        for (IAnimal animal : animalList) {
+            animal.makeSound();
+        }
+
+        Discount percentageDiscount = new PercentageDiscount();
+        Discount fixedAmountDiscount = new FixedAmountDiscount();
+
+        ShoppingCart cartWithPercentage = new ShoppingCart(percentageDiscount);
+        ShoppingCart cartWithFixedAmount = new ShoppingCart(fixedAmountDiscount);
+
+        double totalAmount = 1000;
+
+        double totalAfterPercentageDiscount = cartWithPercentage.calculateTotal(totalAmount);
+        System.out.println("Total after percentage discount: " + totalAfterPercentageDiscount);
+
+        double totalAfterFixedAmount = cartWithFixedAmount.calculateTotal(totalAmount);
+        System.out.println("Total after fixed amount: " + totalAfterFixedAmount);
 
 
     }
