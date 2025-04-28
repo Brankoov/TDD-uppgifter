@@ -3,6 +3,10 @@ package se.branko;
 import se.branko.animal.Bird;
 import se.branko.animal.Dog;
 import se.branko.animal.IAnimal;
+import se.branko.dependencyInversion.Discount;
+import se.branko.dependencyInversion.FixedAmountDiscount;
+import se.branko.dependencyInversion.PercentageDiscount;
+import se.branko.dependencyInversion.ShoppingCart;
 
 import java.util.ArrayList;
 import java.util.List;

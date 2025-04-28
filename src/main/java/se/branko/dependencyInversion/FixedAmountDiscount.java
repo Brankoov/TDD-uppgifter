@@ -1,4 +1,4 @@
-package se.branko;
+package se.branko.dependencyInversion;
 
 public class FixedAmountDiscount implements Discount {
 
