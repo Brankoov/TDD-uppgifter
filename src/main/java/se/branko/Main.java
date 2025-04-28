@@ -60,7 +60,25 @@ public class Main {
         double totalAfterFixedAmount = cartWithFixedAmount.calculateTotal(totalAmount);
         System.out.println("Total after fixed amount: " + totalAfterFixedAmount);
 
+        Product product1 = new Product("Phone", 2000.00);
+        Product product2 = new Product("Laptop", 5000.00);
 
+        List<Product> products = new ArrayList<>();
+        products.add(product1);
+        products.add(product2);
+
+        // Räkna ut totalpriset
+        double totalPrice = 0.0;
+        for (Product product : products) {
+            totalPrice += product.getPrice();
+        }
+        System.out.println("Total price before discount: $" + totalPrice);
+
+        // Applicera rabatt
+        IDiscount discount1 = new TwentyFivePercentDiscount(); // Eller TenPercentDiscount
+        double discountedPrice = discount1.applyDiscount(totalPrice);
+
+        System.out.println("Total price after discount: $" + discountedPrice);
     }
 
 }
