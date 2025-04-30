@@ -1,6 +1,4 @@
-package se.branko;
-
-import se.branko.dependencyInversion.Discount;
+package se.branko.solid;
 
 public class TwentyFivePercentDiscount implements IDiscount {
     @Override

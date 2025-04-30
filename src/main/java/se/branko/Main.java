@@ -7,6 +7,9 @@ import se.branko.dependencyInversion.Discount;
 import se.branko.dependencyInversion.FixedAmountDiscount;
 import se.branko.dependencyInversion.PercentageDiscount;
 import se.branko.dependencyInversion.ShoppingCart;
+import se.branko.solid.IDiscount;
+import se.branko.solid.Product;
+import se.branko.solid.TwentyFivePercentDiscount;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +19,7 @@ public class Main {
 
     public static void main(String[] args) {
         //Items
+        /*
         Item item1 = new Item("Laptop", 1000.00,1);
         Item item2 = new Item("Phone", 500.00, 2);
 
@@ -78,7 +82,12 @@ public class Main {
         IDiscount discount1 = new TwentyFivePercentDiscount(); // Eller TenPercentDiscount
         double discountedPrice = discount1.applyDiscount(totalPrice);
 
-        System.out.println("Total price after discount: $" + discountedPrice);
+        System.out.println("Total price after discount: $" + discountedPrice); */
+
+
+
+
     }
+
 
 }

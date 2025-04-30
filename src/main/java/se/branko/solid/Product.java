@@ -1,4 +1,4 @@
-package se.branko;
+package se.branko.solid;
 
 public class Product {
     private String name;
