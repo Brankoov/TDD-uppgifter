@@ -1,28 +1,25 @@
 package se.branko.cardGame;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class DeckTest {
 
-    @Test
-    void shuffle() {
-    }
+    private Deck deck;
 
-    @Test
-    void drawCard() {
+    @BeforeEach
+    public void setUp() {
+        deck = new Deck();
     }
-
     @Test
-    void discardCard() {
+    public void testDeckHas52CardsAtStart() {
+        assertEquals(52, deck.remainingCards());
     }
-
     @Test
-    void remainingCards() {
-    }
-
-    @Test
-    void discardedCards() {
+    public void testDrawCardReducesDeckSize() {
+        deck.drawCard();
+        assertEquals(51, deck.remainingCards());
     }
 }
