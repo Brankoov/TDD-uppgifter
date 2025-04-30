@@ -7,6 +7,10 @@ import se.branko.dependencyInversion.Discount;
 import se.branko.dependencyInversion.FixedAmountDiscount;
 import se.branko.dependencyInversion.PercentageDiscount;
 import se.branko.dependencyInversion.ShoppingCart;
+import se.branko.solid.IDiscount;
+import se.branko.solid.Item;
+import se.branko.solid.Product;
+import se.branko.solid.TwentyFivePercentDiscount;
 
 import java.util.ArrayList;
 import java.util.List;
