@@ -3,6 +3,8 @@ package se.branko;
 import se.branko.animal.Bird;
 import se.branko.animal.Dog;
 import se.branko.animal.IAnimal;
+import se.branko.cardGame.Card;
+import se.branko.cardGame.Deck;
 import se.branko.dependencyInversion.Discount;
 import se.branko.dependencyInversion.FixedAmountDiscount;
 import se.branko.dependencyInversion.PercentageDiscount;
@@ -84,7 +86,16 @@ public class Main {
 
         System.out.println("Total price after discount: $" + discountedPrice); */
 
+        Deck deck = new Deck();
+        deck.shuffle();
 
+        Card drawn = deck.drawCard();
+        Card drawn2 = deck.drawCard();
+        System.out.println("Drew: " + drawn);
+        System.out.println("Drew: " + drawn2);
+
+        deck.discardCard(drawn);
+        System.out.println("Discarded. Remaining: " + deck.remainingCards());
 
 
     }
