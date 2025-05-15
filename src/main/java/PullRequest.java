@@ -1,3 +1,5 @@
 public class PullRequest {
-    //Bad code
+    void newImpl() {
+
+    }
 }
